@@ -1,0 +1,45 @@
+// Base -reset
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-weight: normal;
+    font-family: $montserrat, $san-serif;
+    background-color: $primary-color;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+input,
+textarea {
+    border: none;
+    outline: none;
+    overflow: auto;
+}
+
+
+
+// This is a Normalize that makes browsers render all elements more consistently
+// and in line with modern standards.

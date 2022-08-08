@@ -1,0 +1,62 @@
+// Media Query
+
+// For Small Devices (Mobile Devices)
+@mixin sm{
+    @media only screen and (max-width: $screen-sm){
+        @content;
+    }
+}
+
+// For Small Devices (Mobile Devices)
+@mixin sm2{
+    @media only screen and (max-width: $screen-sm2){
+        @content;
+    }
+}
+
+// For Small Devices (Mobile Devices)
+@mixin sm3{
+    @media only screen and (max-width: $screen-sm3){
+        @content;
+    }
+}
+
+// For Medium Devices (iPads)
+@mixin md{
+    @media only screen and (max-width: $screen-md){
+        @content;
+    }
+}
+
+// For Large Devices (Tablets, Small screens)
+@mixin lg{
+    @media only screen and (max-width: $screen-lg){
+        @content;
+    }
+}
+
+// Extra Large Devices (Desktops, laptops)
+@mixin xl{
+    @media only screen and (max-width: $screen-xl){
+        @content;
+    }
+}
+
+// Extra Large Devices (Desktops, laptops)
+@mixin xl2{
+    @media only screen and (max-width: $screen-xl2){
+        @content;
+    }
+}
+
+// Extra Large Devices (Desktops, laptops)
+@mixin xlA{
+@media only screen and (max-width: $screen-xlA){
+        @content;
+    }
+}
+
+
+// To use this function, use @include to call it
+// Example @include lg{background-color: blue;}
+// #2      @include xl{background-color: red;color: black;}

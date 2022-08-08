@@ -1,0 +1,58 @@
+// Primary Header
+.navbar{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    .nav-main{
+        display: flex;
+        justify-content: space-around;
+        .secondary-links{
+            font-size: $v-small;
+            color: $bg-white;
+            margin: 0;
+            transition: 0.2s ease-in-out;
+            &:hover{
+                color: $secondary-color;
+                transition: 0.2s ease-in-out;
+            }
+        }
+        .logo{
+            color: white;
+            margin: 0;
+            img{
+                width:125px;
+                user-select: none;
+            }
+        }
+    }
+}
+
+@include sm3{
+    .navbar{
+        .nav-main{
+            .secondary-links{
+                display: none;
+            }
+        }
+    }
+}
+@include sm2{
+    .navbar{
+        .nav-main{
+            .secondary-links{
+                display: none;
+
+            }
+        }
+    }
+}
+@include md{
+    .navbar{
+        .nav-main{
+            .secondary-links{
+                display: none;
+            }
+        }
+    }
+}

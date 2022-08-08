@@ -1,0 +1,195 @@
+// Home Page
+#content{
+    // position: relative;
+    .section{
+        height: 100vh;
+        text-align: center;
+    }
+    .s1{
+        background-color: $primary-color;
+        // .line { 
+        //     z-index: 1000;
+        //     position: absolute;
+        //     top: 52.5%;
+        //     left: 0;
+        //     border: 3px solid $bg-white;
+        //     color: $bg-white;
+        //     width: 24%;
+        //     border-top-right-radius: 25px;
+        //     border-bottom-right-radius: 25px;
+        // }
+        // .video-start{
+        //     font-size: 3.5rem;
+        //     position: absolute;
+        //     top: 51%;
+        //     left: 25%;
+        // }
+        .bannar-img{
+            width: 100%;
+            height: 100vh;
+            background-image: url(http://paul-themes.com/wordpress/ramsay/wp-content/uploads/2020/01/attachment-18.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        .banner-info{
+            color: $secondary-color;
+
+            p{
+                width: 1000px;
+                position: absolute;
+                top: 40%;
+                left: 30%;
+                transform: translate(-50%, -50%);
+                font-size: 2.4rem;
+                text-align: left;
+                line-height: 1.1;
+                font-weight: 700;
+                .my-name{
+                    background: none;
+                    color: white;
+                }
+            }
+        }
+        .scroll-down{
+            width: 100%;
+            position: absolute;
+            bottom: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            i{
+                color: white;
+                font-size: 30px;
+            }
+            animation-name: bollJump;
+            animation-duration: 0.575s;
+            animation-direction: alternate;
+            animation-timing-function: cubic-bezier(0.6, 0.08, 0.8, 0.6);
+            animation-iteration-count: infinite;
+            
+        }
+        @keyframes bollJump {
+            from {
+                transform: translate3d(0, 0, 0);
+            }
+            
+            to {
+                transform: translate3d(0, 90px, 0);
+            }
+        }
+    }
+}
+
+// Responsive Desgin 
+@include xlA{
+    #content{
+        .s1{
+            .banner-info{
+                p{
+                    width: 820px;
+                    font-size: 2.1rem;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}
+
+@include xl2{
+    #content{
+        .s1{
+            .banner-info{
+                p{
+                    width: 710px;
+                    font-size: 2.1rem;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}
+@include xl{
+    #content{
+        .s1{
+            .banner-info{
+                p{
+                    width: 580px;
+                    font-size: 1.8rem;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}
+@include lg{
+    #content{
+        .s1{
+            .banner-info{
+                p{
+                    width: 410px;
+                    font-size: 1.3rem;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}
+@include md{
+    #content{
+        .s1{
+            .banner-info{
+                p{
+                    width: 350px;
+                    font-size: 1.3rem;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
+    }
+}
+@include sm3{
+    #content{
+        .s1{
+            .banner-info{
+                p{
+                    width: 240px;
+                    font-size: 1.3rem;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+            .scroll-down{
+                bottom: 13%;
+            }
+        }
+    }
+}
+@include sm2{
+    #content{
+        .s1{
+            .banner-info{
+                p{
+                    width: 100%;
+                    position: absolute;
+                    top: 28%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                    font-size: 1.3rem;
+                    transition: 0.2s ease-in-out;
+                }
+            }
+        }
+
+        @keyframes bollJump {
+            from {
+                transform: translate3d(0, 0, 0);
+            }
+            
+            to {
+                transform: translate3d(0, 45px, 0);
+            }
+        }
+        
+    }
+}

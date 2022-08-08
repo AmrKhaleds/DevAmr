@@ -1,0 +1,12 @@
+// fullpage
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+    background-color: $bg-white;
+}
+
+
+body #magicMouseCursor{
+    &:hover{
+        width: 40px;
+        height: 40px;
+    }
+}
