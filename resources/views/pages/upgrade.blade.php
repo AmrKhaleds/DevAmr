@@ -93,7 +93,7 @@
               </li>
             <li class="nav-item mb-5 mr-4 ml-4 pl-1 bg-danger" style="position: absolute; bottom: 0;">
                 <a class="nav-link text-white" href="https://www.creative-tim.com/product/argon-dashboard-pro-laravel" target="_blank">
-                    <i class="ni ni-cloud-download-95"></i> Upgrade to PRO
+                    {{-- <i class="ni ni-cloud-download-95"></i> Upgrade to PRO --}}
                 </a>
             </li>
         </ul>
@@ -377,9 +377,9 @@
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
-            <div class="col-lg-6 col-7">
+            {{-- <div class="col-lg-6 col-7">
               <h6 class="h2 text-white d-inline-block mb-0">Upgrade to PRO</h6>
-            </div>
+            </div> --}}
             <div class="col-lg-6 col-5 text-right">
               <a href="#" class="btn btn-sm btn-neutral">New</a>
               <a href="#" class="btn btn-sm btn-neutral">Filters</a>
@@ -508,9 +508,9 @@
                       <td class="text-center">
                         <a href="#" class="btn btn-round btn-default disabled">Current Version</a>
                       </td>
-                      <td class="text-center">
+                      {{-- <td class="text-center">
                         <a target="_blank" href="https://www.creative-tim.com/product/argon-dashboard-pro-laravel" class="btn btn-round btn-primary">Upgrade to PRO</a>
-                      </td>
+                      </td> --}}
                     </tr>
                   </tbody>
                 </table>

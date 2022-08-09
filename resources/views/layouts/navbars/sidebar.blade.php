@@ -6,7 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('home') }}">
-            <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="{{ asset('assets') }}/img/logo.png"  class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -54,7 +54,7 @@
                 <div class="row">
                     <div class="col-6 collapse-brand">
                         <a href="{{ route('home') }}">
-                            <img src="{{ asset('argon') }}/img/brand/blue.png">
+                            <img src="{{ asset('assets') }}/img/logo.png">
                         </a>
                     </div>
                     <div class="col-6 collapse-close">
@@ -117,8 +117,8 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('table') }}">
-                      <i class="ni ni-bullet-list-67 text-default"></i>
-                      <span class="nav-link-text">Tables</span>
+                        <i class="ni ni-bullet-list-67 text-default"></i>
+                        <span class="nav-link-text">Tables</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -127,9 +127,9 @@
                     </a>
                 </li>
                 <li class="nav-item mb-5 mr-4 ml-4 pl-1 bg-danger" style="position: absolute; bottom: 0;">
-                    <a class="nav-link text-white" href="https://www.creative-tim.com/product/argon-dashboard-pro-laravel" target="_blank">
+                    {{-- <a class="nav-link text-white" href="https://www.creative-tim.com/product/argon-dashboard-pro-laravel" target="_blank">
                         <i class="ni ni-cloud-download-95"></i> Upgrade to PRO
-                    </a>
+                    </a> --}}
                 </li>
             </ul>
             <!-- Divider -->
