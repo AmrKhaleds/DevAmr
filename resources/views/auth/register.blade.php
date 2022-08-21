@@ -41,6 +41,19 @@
                                     </span>
                                 @endif
                             </div>
+                            <div class="form-group{{ $errors->has('username') ? ' has-danger' : '' }}">
+                                <div class="input-group input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-hat-3"></i></span>
+                                    </div>
+                                    <input class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" placeholder="{{ __('UserName') }}" type="text" name="username" value="{{ old('username') }}" required autofocus>
+                                </div>
+                                @if ($errors->has('username'))
+                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('username') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                             <div class="form-group{{ $errors->has('email') ? ' has-danger' : '' }}">
                                 <div class="input-group input-group-alternative mb-3">
                                     <div class="input-group-prepend">
@@ -53,36 +66,6 @@
                                         <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                 @endif
-                            </div>
-                            <div class="d-flex justify-content-between">
-                                {{-- Age --}}
-                                <div class="{{ $errors->has('age') ? ' has-danger' : '' }}">
-                                    <div class="input-group input-group-alternative mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-age-83"></i></span>
-                                        </div>
-                                        <input class="form-control{{ $errors->has('age') ? ' is-invalid' : '' }}" placeholder="{{ __('Age') }}" type="number" name="age" value="{{ old('age') }}" required>
-                                    </div>
-                                    @if ($errors->has('age'))
-                                        <span class="invalid-feedback" style="display: block;" role="alert">
-                                            <strong>{{ $errors->first('age') }}</strong>
-                                        </span>
-                                    @endif
-                                </div>
-                                {{-- Country --}}
-                                <div class="{{ $errors->has('country') ? ' has-danger' : '' }}">
-                                    <div class="input-group input-group-alternative mb-3">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-country-83"></i></span>
-                                        </div>
-                                        <input class="form-control{{ $errors->has('country') ? ' is-invalid' : '' }}" placeholder="{{ __('Country') }}" type="text" name="country" value="{{ old('country') }}" required>
-                                    </div>
-                                    @if ($errors->has('country'))
-                                        <span class="invalid-feedback" style="display: block;" role="alert">
-                                            <strong>{{ $errors->first('country') }}</strong>
-                                        </span>
-                                    @endif
-                                </div>
                             </div>
                             <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
                                 <div class="input-group input-group-alternative">
