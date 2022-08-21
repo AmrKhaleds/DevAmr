@@ -68,7 +68,7 @@ textarea {
 #content .s1 .bannar-img {
   width: 100%;
   height: 100vh;
-  background-image: url(http://paul-themes.com/wordpress/ramsay/wp-content/uploads/2020/01/attachment-18.jpg);
+  background-image: url("https://devamr.xyz/public/assets/img/slide1.png");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
