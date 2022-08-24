@@ -149,6 +149,12 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="{{ route('user.index') }}">
+                    <i class="ni ni-single-02 text-primary" style="color: "></i>
+                    <span class="nav-link-text">{{ __('Users') }}</span>
+                </a>
+            </li>
+            {{-- <li class="nav-item">
                 <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                     <i class="fab fa-laravel" style="color: #f4645f;"></i>
                     <span class="nav-link-text" style="color: #f4645f;">{{ __('Laravel Examples') }}</span>
@@ -168,9 +174,9 @@
                         </li>
                     </ul>
                 </div>
-            </li>
+            </li> --}}
 
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="{{ route('icons') }}">
                     <i class="ni ni-planet text-blue"></i> {{ __('Icons') }}
                 </a>
@@ -182,20 +188,20 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('table') }}">
-                  <i class="ni ni-bullet-list-67 text-default"></i>
-                  <span class="nav-link-text">Tables</span>
+                    <i class="ni ni-bullet-list-67 text-default"></i>
+                    <span class="nav-link-text">Tables</span>
                 </a>
             </li>
-                           <li class="nav-item mb-5 mr-4 ml-4 pl-1 bg-danger" style="position: absolute; bottom: 0;">
+                    <li class="nav-item mb-5 mr-4 ml-4 pl-1 bg-danger" style="position: absolute; bottom: 0;">
                     <a class="nav-link text-white" href="https://www.creative-tim.com/product/argon-dashboard-pro-laravel" target="_blank">
                         <i class="ni ni-cloud-download-95"></i> Upgrade to PRO
                     </a>
                 </li>
         </ul>
         <!-- Divider -->
-        <hr class="my-3">
+        <hr class="my-3"> --}}
         <!-- Heading -->
-        <h6 class="navbar-heading text-muted">Documentation</h6>
+        {{-- <h6 class="navbar-heading text-muted">Documentation</h6>
         <!-- Navigation -->
         <ul class="navbar-nav mb-md-3">
             <li class="nav-item">
@@ -213,7 +219,7 @@
                     <i class="ni ni-ui-04"></i> Components
                 </a>
             </li>
-        </ul>
+        </ul> --}}
     </div>
 </div>
 </nav>                
@@ -280,9 +286,6 @@
 </nav>    
             <div class="header bg-gradient-primary pb-8 pt-5 pt-md-8">
 <div class="container-fluid">
-    <div class="alert alert-danger" role="alert">
-        <strong>This is a PRO feature!</strong>
-      </div>
     <div class="header-body">
         <!-- Card stats -->
         <div class="row">
@@ -384,7 +387,7 @@
                             <h3 class="mb-0">Users</h3>
                         </div>
                         <div class="col-4 text-right">
-                            <a href="" class="btn btn-sm btn-primary">Add user</a>
+                            <a href="{{ route('users.addUser') }}" class="btn btn-sm btn-primary">Add user</a>
                         </div>
                     </div>
                 </div>
@@ -403,24 +406,28 @@
                             </tr>
                         </thead>
                         <tbody>
-                                                                <tr>
-                                    <td>Admin Admin</td>
+                            @foreach ($users as $user)
+                                <tr>
+                                    <td>{{ $user->name }}</td>
                                     <td>
-                                        <a href="mailto:admin@argon.com">admin@argon.com</a>
+                                        <a href="mailto:{{ $user->email }}">{{ $user->email }}</a>
                                     </td>
-                                    <td>12/02/2020 11:00</td>
+                                    <td>{{ $user->created_at }}</td>
                                     <td class="text-right">
                                         <div class="dropdown">
                                             <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                 <i class="fas fa-ellipsis-v"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                                                                        <a class="dropdown-item" href="">Edit</a>
-                                                                                                </div>
+                                                <a class="dropdown-item" href="">Edit</a>
+                                            </div>
                                         </div>
                                     </td>
                                 </tr>
-                                                        </tbody>
+                                
+                            @endforeach
+                                
+                        </tbody>
                     </table>
                 </div>
                 <div class="card-footer py-4">

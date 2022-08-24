@@ -23,12 +23,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::group(['middleware' => 'auth'], function () {
-    // Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
-    // Route::resource('user', UserController::class)->except(['show']);
-    Route::resource('user', 'UserController')->except([
-        'show'
-    ]);
-
+    Route::resource('user', 'UserController')->except(['show']);
+    Route::get('adduser', [UserController::class, 'addUser'])->name('users.addUser');
     ///////////////////////////////////////
     //laravel v7 and canceld in version 8//
     //////////////////////////////////////
@@ -38,10 +34,9 @@ Route::group(['middleware' => 'auth'], function () {
 
 	Route::get('profile', [ProfileController::class, 'edit'])->name('profile.edit');
 	Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
-
-	Route::get('upgrade', function () {
-        return view('pages.upgrade');
-    })->name('upgrade'); 
+	// Route::get('upgrade', function () {
+    //     return view('pages.upgrade');
+    // })->name('upgrade'); 
     Route::get('map', function () {
         return view('pages.maps');
     })->name('map');
