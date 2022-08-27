@@ -28,7 +28,7 @@
             @include('layouts.navbars.sidebar')
         @endauth
         
-        <div class="main-content">
+        <div class="main-content" style="background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;">
             @include('layouts.navbars.navbar')
             @yield('content')
         </div>

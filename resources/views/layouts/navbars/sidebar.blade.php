@@ -6,7 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('home') }}">
-            <img src="{{ asset('assets') }}/img/logo.png"  class="navbar-brand-img" alt="...">
+            <img src="{{ asset('assets') }}/img/logo(dark).png"  class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -88,6 +88,13 @@
                     <a class="nav-link" href="{{ route('user.index') }}">
                         <i class="ni ni-single-02 text-primary" style="color: "></i>
                         <span class="nav-link-text">{{ __('Users') }}</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('users.settings') }}">
+                        <i class="ni ni-settings text-primary" style="color: "></i>
+                        <span class="nav-link-text">{{ __('Setting') }}</span>
                     </a>
                 </li>
                 {{-- <li class="nav-item">

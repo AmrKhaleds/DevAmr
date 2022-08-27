@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SettingsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['middleware' => 'auth'], function () {
     Route::resource('user', 'UserController')->except(['show']);
     Route::get('adduser', [UserController::class, 'addUser'])->name('users.addUser');
+    Route::get('settings', [SettingsController::class, 'index'])->name('users.settings');
     ///////////////////////////////////////
     //laravel v7 and canceld in version 8//
     //////////////////////////////////////
